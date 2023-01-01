@@ -29,7 +29,6 @@ class HomeView extends GetView<HomeController> {
             flex: 15,
             child: Column(
               children: [
-                header(),
                 !context.isPhone
                     ? const header()
                     : Container(
