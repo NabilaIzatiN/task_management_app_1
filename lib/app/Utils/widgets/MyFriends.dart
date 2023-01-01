@@ -4,6 +4,8 @@ import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app_1/app/Utils/styles/AppColors.dart';
 import 'package:task_management_app_1/app/routes/app_pages.dart';
 
+import 'header.dart';
+
 class MyFriend extends StatelessWidget {
   const MyFriend({
     Key? key,
@@ -59,12 +61,12 @@ class MyFriend extends StatelessWidget {
                             borderRadius: BorderRadius.circular(100),
                             child: const Image(
                                 image: NetworkImage(
-                                    'https://pbs.twimg.com/profile_images/1539609458514358272/VeuA18MI_400x400.jpg',
+                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTlS9yy3FyMhV8yz_eiEfOaf37w_AE4g0R-Q&usqp=CAU',
                                     scale: 3)),
                           ),
                           const Spacer(),
                           const Text(
-                            'Daffi Fadillah',
+                            'Dreamers Terimakasih',
                             style: TextStyle(color: AppColors.primaryText),
                           ),
                         ],

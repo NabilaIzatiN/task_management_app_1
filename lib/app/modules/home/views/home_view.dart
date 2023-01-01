@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app_1/app/Utils/styles/AppColors.dart';
+import 'package:task_management_app_1/app/Utils/widgets/MyTask.dart';
+import 'package:task_management_app_1/app/Utils/widgets/myfriends.dart';
+import 'package:task_management_app_1/app/Utils/widgets/upcomingtask.dart';
 import 'package:task_management_app_1/app/routes/app_pages.dart';
 
 import '../../../Utils/widgets/header.dart';
@@ -17,95 +20,134 @@ class HomeView extends GetView<HomeController> {
       key: _drawerKey,
       drawer: const Sidebar(),
       backgroundColor: AppColors.primaryBg,
-      body: Row(
-        children: [
-          !context.isPhone
-              ? const Expanded(
-                  flex: 2,
-                  child: Sidebar(),
-                )
-              : const SizedBox(),
-          Expanded(
-            flex: 15,
-            child: Column(
-              children: [
-                !context.isPhone
-                    ? const header()
-                    : Container(
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                _drawerKey.currentState!.openDrawer();
-                              },
-                              icon: const Icon(
-                                Icons.menu,
-                                color: AppColors.primaryText,
+      body: SafeArea(
+        child: Row(
+          children: [
+            !context.isPhone
+                ? const Expanded(
+                    flex: 2,
+                    child: Sidebar(),
+                  )
+                : const SizedBox(),
+            Expanded(
+              flex: 15,
+              child: Column(
+                children: [
+                  !context.isPhone
+                      ? const header()
+                      : Container(
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  _drawerKey.currentState!.openDrawer();
+                                },
+                                icon: const Icon(
+                                  Icons.menu,
+                                  color: AppColors.primaryText,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            Column(
+                              const SizedBox(
+                                width: 15,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    'Task Management',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Manage task easy with friends',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: AppColors.primaryText,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const Spacer(),
+                              const Icon(
+                                Ionicons.notifications,
+                                color: AppColors.primaryText,
+                                size: 30,
+                              ),
+                              const SizedBox(
+                                width: 15,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30),
+                                child: const CircleAvatar(
+                                  backgroundColor: Colors.amber,
+                                  radius: 25,
+                                  foregroundImage:
+                                      AssetImage('assets/images/profile.png'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                  // content / isi page / screen
+                  Expanded(
+                    child: Container(
+                      padding: !context.isPhone
+                          ? const EdgeInsets.all(30)
+                          : const EdgeInsets.all(20),
+                      margin: !context.isPhone
+                          ? const EdgeInsets.all(10)
+                          : const EdgeInsets.all(0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: !context.isPhone
+                            ? BorderRadius.circular(50)
+                            : BorderRadius.circular(30),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: Get.height * 0.4,
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  'Task Management',
+                                  'My Task',
                                   style: TextStyle(
-                                    fontSize: 20,
-                                    color: AppColors.primaryText,
-                                  ),
+                                      color: AppColors.primaryText,
+                                      fontSize: 25),
                                 ),
-                                Text(
-                                  'Manage task easy with friends',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: AppColors.primaryText,
-                                  ),
+                                SizedBox(
+                                  height: 15,
                                 ),
+                                // My task
+                                MyTask(),
                               ],
                             ),
-                            const Spacer(),
-                            const Icon(
-                              Ionicons.notifications,
-                              color: AppColors.primaryText,
-                              size: 30,
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
-                              child: const CircleAvatar(
-                                backgroundColor: Colors.amber,
-                                radius: 25,
-                                foregroundImage: NetworkImage(
-                                    'https://pbs.twimg.com/profile_images/1539609458514358272/VeuA18MI_400x400.jpg'),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                          !context.isPhone
+                              ? Expanded(
+                                  child: Row(
+                                    children: const [
+                                      UpcomingTask(),
+                                      MyFriend(),
+                                    ],
+                                  ),
+                                )
+                              : const UpcomingTask(),
+                        ],
                       ),
-                // content / isi page / screen
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(50),
-                    margin: !context.isPhone
-                        ? const EdgeInsets.all(10)
-                        : const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: !context.isPhone
-                          ? BorderRadius.circular(50)
-                          : BorderRadius.circular(30),
+                      // content / isi page / screen
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
