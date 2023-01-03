@@ -49,16 +49,15 @@ class MyFriend extends StatelessWidget {
                 child: GridView.builder(
                     shrinkWrap: true,
                     itemCount: 8,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 40),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: context.isPhone ? 2 : 3,
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 40),
                     itemBuilder: (context, index) {
                       return Column(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
+                            borderRadius: BorderRadius.circular(50),
                             child: const Image(
                                 image: NetworkImage(
                                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTlS9yy3FyMhV8yz_eiEfOaf37w_AE4g0R-Q&usqp=CAU',
@@ -67,8 +66,10 @@ class MyFriend extends StatelessWidget {
                           const Spacer(),
                           const Text(
                             'Dreamers Terimakasih',
-                            style: TextStyle(color: AppColors.primaryText),
-                          ),
+                            style: TextStyle(
+                              color: AppColors.primaryText,
+                            ),
+                          )
                         ],
                       );
                     }),
