@@ -131,13 +131,13 @@ class HomeView extends GetView<HomeController> {
                           !context.isPhone
                               ? Expanded(
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       UpcomingTask(),
                                       MyFriend(),
                                     ],
                                   ),
                                 )
-                              : const UpcomingTask(),
+                              : UpcomingTask(),
                         ],
                       ),
                       // content / isi page / screen
