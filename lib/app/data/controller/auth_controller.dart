@@ -46,7 +46,7 @@ class AuthController extends GetxController {
 
     print(googleUser!.email);
     // Once signed in, return the UserCredential
-    await auth
+    await FirebaseAuth.instance
         .signInWithCredential(credential)
         .then((value) => _userCredential = value);
 
@@ -153,9 +153,15 @@ class AuthController extends GetxController {
     return firestore.collection('friends').doc(email).snapshots();
   }
 
-  // Future<QuerySnapshot<Map<String, dynamic>>> getPeople() async {
-  //   CollectionReference users = firestore.collection('users');
-
-  //   return;
-  // }
+  Future<QuerySnapshot<Map<String, dynamic>>> getPeople() async {
+    CollectionReference users = firestore.collection('users');
+    final cekfriends = await users.doc(auth.currentUser!.email).get();
+    var listFriends =
+        (cekfriends.data() as Map<String, dynamic>)['emailFriends'] as List;
+    QuerySnapshot<Map<String, dynamic>> hasil = await firestore
+        .collection('users')
+        .where('email', whereNotIn: listFriends)
+        .get();
+    return hasil;
+  }
 }

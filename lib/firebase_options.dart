@@ -44,42 +44,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCm8Bz4T5eUzv9Oe9R6H5w_mrOI1i3W-fc',
-    appId: '1:860614070882:web:d5b5c0cea3c86aaef0b73b',
-    messagingSenderId: '860614070882',
-    projectId: 'task-management-apps-1',
-    authDomain: 'task-management-apps-1.firebaseapp.com',
-    storageBucket: 'task-management-apps-1.appspot.com',
-    measurementId: 'G-7CS73TBNFR',
+    apiKey: 'AIzaSyBvGmyJKLgEySLGM5drRjvyCkwdAREUq8k',
+    appId: '1:1079263788857:web:087d29603fbcba7fc0f2e8',
+    messagingSenderId: '1079263788857',
+    projectId: 'tugas-individu-884e7',
+    authDomain: 'tugas-individu-884e7.firebaseapp.com',
+    storageBucket: 'tugas-individu-884e7.appspot.com',
+    measurementId: 'G-PZXQN7PJFQ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBNsx_8ewn6jshs_TsUnBzqWHdoGm7cGbE',
-    appId: '1:860614070882:android:762ab29513bd0975f0b73b',
-    messagingSenderId: '860614070882',
-    projectId: 'task-management-apps-1',
-    storageBucket: 'task-management-apps-1.appspot.com',
+    apiKey: 'AIzaSyBvGmyJKLgEySLGM5drRjvyCkwdAREUq8k',
+    appId: '1:1079263788857:web:087d29603fbcba7fc0f2e8',
+    messagingSenderId: '1079263788857',
+    projectId: 'tugas-individu-884e7',
+    storageBucket: 'tugas-individu-884e7.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCbx_dFjmiWCcDizO_eNjJRhsL3bJ6OrCM',
-    appId: '1:860614070882:ios:7025b23e509415cef0b73b',
-    messagingSenderId: '860614070882',
-    projectId: 'task-management-apps-1',
-    storageBucket: 'task-management-apps-1.appspot.com',
-    androidClientId: '860614070882-5lp3ekhrhnkn3u6mbje10esoih14lbe6.apps.googleusercontent.com',
-    iosClientId: '860614070882-ognnjc3cvrnfmcdr34iass400cmnrthv.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBvGmyJKLgEySLGM5drRjvyCkwdAREUq8k',
+    appId: '1:1079263788857:web:087d29603fbcba7fc0f2e8',
+    messagingSenderId: '1079263788857',
+    projectId: 'tugas-individu-884e7',
+    storageBucket: 'tugas-individu-884e7.appspot.com',
+    androidClientId:
+        '860614070882-5lp3ekhrhnkn3u6mbje10esoih14lbe6.apps.googleusercontent.com',
+    iosClientId:
+        '860614070882-ognnjc3cvrnfmcdr34iass400cmnrthv.apps.googleusercontent.com',
     iosBundleId: 'com.example.taskManagementApp1',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCbx_dFjmiWCcDizO_eNjJRhsL3bJ6OrCM',
-    appId: '1:860614070882:ios:7025b23e509415cef0b73b',
-    messagingSenderId: '860614070882',
-    projectId: 'task-management-apps-1',
-    storageBucket: 'task-management-apps-1.appspot.com',
-    androidClientId: '860614070882-5lp3ekhrhnkn3u6mbje10esoih14lbe6.apps.googleusercontent.com',
-    iosClientId: '860614070882-ognnjc3cvrnfmcdr34iass400cmnrthv.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBvGmyJKLgEySLGM5drRjvyCkwdAREUq8k',
+    appId: '1:1079263788857:web:087d29603fbcba7fc0f2e8',
+    messagingSenderId: '1079263788857',
+    projectId: 'tugas-individu-884e7',
+    storageBucket: 'tugas-individu-884e7.appspot.com',
+    androidClientId:
+        '860614070882-5lp3ekhrhnkn3u6mbje10esoih14lbe6.apps.googleusercontent.com',
+    iosClientId:
+        '860614070882-ognnjc3cvrnfmcdr34iass400cmnrthv.apps.googleusercontent.com',
     iosBundleId: 'com.example.taskManagementApp1',
   );
 }

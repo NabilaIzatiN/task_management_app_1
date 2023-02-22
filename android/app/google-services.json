@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "860614070882",
-    "project_id": "task-management-apps-1",
-    "storage_bucket": "task-management-apps-1.appspot.com"
+    "project_number": "1079263788857",
+    "project_id": "tugas-individu-884e7",
+    "storage_bucket": "tugas-individu-884e7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:860614070882:android:762ab29513bd0975f0b73b",
+        "mobilesdk_app_id": "1:1079263788857:android:a197281a307fad54c0f2e8",
         "android_client_info": {
           "package_name": "com.example.task_management_app_1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "860614070882-5lp3ekhrhnkn3u6mbje10esoih14lbe6.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.task_management_app_1",
-            "certificate_hash": "142cc1850b941b546c929c51adf37083de2043a8"
-          }
-        },
-        {
-          "client_id": "860614070882-9k8soh9osinfv5hgc33ben2etu9n7rl9.apps.googleusercontent.com",
+          "client_id": "1079263788857-j5qd9r8cprgartcr6btmocsk71om3oe1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNsx_8ewn6jshs_TsUnBzqWHdoGm7cGbE"
+          "current_key": "AIzaSyAMNp-j7frw9o53nQS0tFHdVWQRlAe2z6c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "860614070882-9k8soh9osinfv5hgc33ben2etu9n7rl9.apps.googleusercontent.com",
+              "client_id": "1079263788857-j5qd9r8cprgartcr6btmocsk71om3oe1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

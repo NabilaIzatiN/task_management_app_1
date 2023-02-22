@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
@@ -81,10 +82,14 @@ class MyFriend extends StatelessWidget {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(50),
                                     child: Image(
-                                        image: NetworkImage(data!['photo'])),
+                                      image: NetworkImage(data!['photo']),
+                                      height: Get.width * 0.35,
+                                      width: Get.width * 0.4,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                   Text(
-                                    data!['name'],
+                                    data['name'],
                                     style: const TextStyle(
                                       color: AppColors.primaryText,
                                     ),
